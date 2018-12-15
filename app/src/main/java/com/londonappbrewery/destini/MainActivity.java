@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
     TextView T;
     Button Answ1;
     Button Answ2;
-    boolean btnt, btnb;
-    String pos="T1";
+    boolean btnt, btnb; // button top and bottom
+    String pos="T1"; //possision
 
 
     @Override
