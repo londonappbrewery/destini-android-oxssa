@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     TextView T;
     Button Answ1;
     Button Answ2;
+    boolean btnt, btnb;
+    String pos="T1";
 
 
     @Override
@@ -31,21 +33,75 @@ public class MainActivity extends AppCompatActivity {
         Answ1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btnt = true;
+                finder ();
+                btnt=false;
+
 
             }
         });
-
-        Answ2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
 
 
         // TODO: Steps 6, 7, & 9 - Set a listener on the bottom button:
+        Answ2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnb = true;
+                finder ();
+                btnb=false;
+
+            }
+        });
 
 
     }
+
+    public void finder (){
+
+        if (pos=="T1" && btnt==true){
+            T.setText(R.string.T3_Story);
+            Answ1.setText(R.string.T3_Ans1);
+            Answ2.setText(R.string.T3_Ans2);
+            pos="T3";
+        }
+        else if(pos=="T1" && btnb==true){
+            T.setText(R.string.T2_Story);
+            Answ1.setText(R.string.T2_Ans1);
+            Answ2.setText(R.string.T2_Ans2);
+            pos="T2";
+        }
+        else if(pos=="T3" && btnt==true){
+            T.setText(R.string.T6_End);
+            Answ1.setText("");
+            Answ2.setText("");
+        }
+        else if(pos=="T3" && btnb==true){
+            T.setText(R.string.T5_End);
+            Answ1.setText("");
+            Answ2.setText("");
+        }
+        else if(pos=="T2" && btnb==true){
+            T.setText(R.string.T4_End);
+            Answ1.setText("");
+            Answ2.setText("");
+        }
+        else if(pos=="T2" && btnt==true){
+            T.setText(R.string.T3_Story);
+            Answ1.setText(R.string.T3_Ans1);
+            Answ2.setText(R.string.T3_Ans2);
+            pos="T3b";
+        }
+        else if(pos=="T3b" && btnt==true){
+            T.setText(R.string.T6_End);
+            Answ1.setText("");
+            Answ2.setText("");
+        }
+        else if(pos=="T3b" && btnb==true){
+            T.setText(R.string.T5_End);
+            Answ1.setText("");
+            Answ2.setText("");
+        }
+    }
+
+
 }
