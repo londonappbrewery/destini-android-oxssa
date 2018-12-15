@@ -72,18 +72,18 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(pos=="T3" && btnt==true){
             T.setText(R.string.T6_End);
-            Answ1.setText("");
-            Answ2.setText("");
+            Answ1.setVisibility(View.GONE);
+            Answ2.setVisibility(View.GONE);
         }
         else if(pos=="T3" && btnb==true){
             T.setText(R.string.T5_End);
-            Answ1.setText("");
-            Answ2.setText("");
+            Answ1.setVisibility(View.GONE);
+            Answ2.setVisibility(View.GONE);
         }
         else if(pos=="T2" && btnb==true){
             T.setText(R.string.T4_End);
-            Answ1.setText("");
-            Answ2.setText("");
+            Answ1.setVisibility(View.GONE);
+            Answ2.setVisibility(View.GONE);
         }
         else if(pos=="T2" && btnt==true){
             T.setText(R.string.T3_Story);
@@ -93,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(pos=="T3b" && btnt==true){
             T.setText(R.string.T6_End);
-            Answ1.setText("");
-            Answ2.setText("");
+            Answ1.setVisibility(View.GONE);
+            Answ2.setVisibility(View.GONE);
         }
         else if(pos=="T3b" && btnb==true){
             T.setText(R.string.T5_End);
-            Answ1.setText("");
-            Answ2.setText("");
+            Answ1.setVisibility(View.GONE);
+            Answ2.setVisibility(View.GONE);
         }
     }
 
